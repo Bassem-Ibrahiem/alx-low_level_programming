@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * writing the Hello message
- * to in main with put() function
+ *main in beginning
+ *return 0 always
  */
 int main(void)
 {puts("\"Programming is like building a multilingual puzzle");
