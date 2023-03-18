@@ -3,11 +3,12 @@
 #include <stdio.h>
 
 /**
- * main - Prints all all possible different pair combinations of 
+ * main - Prints all all possible different pair combinations of
  * single-digit numbers.
  *
  * Return: Always 0.
 */
+
 int main(void)
 {
 	int i, j;
@@ -21,7 +22,7 @@ int main(void)
 
 			if (i == 8 && j == 9)
 				continue;
-			
+						
 			putchar(',');
 			putchar(' ');
 		}
