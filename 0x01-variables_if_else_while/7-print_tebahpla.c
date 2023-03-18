@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - Prints lowercase alphabet.
+ * main - Prints lowercase alphabet in reverse order.
  *
  * Return: Always 0.
 */
