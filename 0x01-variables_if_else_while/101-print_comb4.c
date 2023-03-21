@@ -8,26 +8,22 @@
 
 int main(void)
 {
-	int i, j, k;
+	int x, y, z;
 
-	for (i = 0; i < 8; i++)
-	{
-		for (j = i + 1; j < 9; j++)
-		{
-			for (k = j + 1; k < 10; k++)
-			{
-				putchar((i % 10) + '0');
-				putchar((j % 10) + '0');
-				putchar((k % 10) + '0');
+	for (x = 0; x < 8; x++)
+		for (y = x+1; y <9; y++)
+			for (z = y+1; z <10; z++)
+				{
+					putchar(x + '0');
+					putchar(y + '0');
+					putchar(z + '0');
 
-				if (i == 7 && j == 8 && k == 9)
-					continue;
-				putchar(',');
-				putchar(' ');
-			}
-		}
-	}
-
+					if (x != 7 || y != 8 || z != 9)
+					{
+						putchar(',');
+						[[Oputchar(' ');
+					}
+				}
 	putchar('\n');
 
 	return (0);
