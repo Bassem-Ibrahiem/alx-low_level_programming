@@ -9,7 +9,11 @@
 int main(void)
 {
 	char *a ="_putchar";
-	_putchar(*a);
+	while (*a)
+	{
+		_putchar(*a);
+		a++;
+	}
 	_putchar("\n");
 
 	return (0);
