@@ -1,27 +1,39 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
-
+#include "main.h"
 /**
- * main - Prints all all possible combinations of single-digit numbers
- *
- * Return: Always 0.
-*/
-
-int main(void)
+ * print_to_98 - prints all natural numbers from n to 98
+ * @n: number input
+ * Return: Always 0
+ */
+void print_to_98(int n)
 {
-	int i;
-
-	for (i = 0; i < 10; i++)
+	if (n < 98)
 	{
-		putchar((i % 10) + '0');
-		if (i != 9)
+		while (n <= 98)
 		{
-			putchar(',');
-			putchar(' ');
+			printf("%d", n);
+			if (n != 98)
+			{
+				printf(", ");
+			}
+			n++;
 		}
 	}
-	putchar('\n');
-
-	return (0);
+	else if (n > 98)
+	{
+		while (n >= 98)
+		{
+			printf("%d", n);
+			if (n != 98)
+			{
+				printf(", ");
+			}
+			n--;
+		}
+	}
+	else
+	{
+		printf("98");
+	}
+	printf("\n");
 }
