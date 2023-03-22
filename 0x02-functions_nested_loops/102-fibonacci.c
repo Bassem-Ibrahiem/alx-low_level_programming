@@ -15,12 +15,12 @@ int main(void)
 
 	while (n < 50)
 	{
-		f = b + i;
+		f = b + a;
 		if (n != 49)
 			printf("%ld, ", f);
 		else
 			printf("%ld\n", f);
-		a = j;
+		a = b;
 		b = f;
 		n += 1;
 	}
