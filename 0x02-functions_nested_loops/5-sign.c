@@ -1,27 +1,27 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Prints all all possible combinations of single-digit numbers
+ * print_sign - prints the sign of a number
+ * c@: whether it is?
  *
- * Return: Always 0.
+ * Return: as it is?
 */
 
-int main(void)
+int print_sign(int n)
 {
-	int i;
-
-	for (i = 0; i < 10; i++)
+	if (n > 0)
 	{
-		putchar((i % 10) + '0');
-		if (i != 9)
-		{
-			putchar(',');
-			putchar(' ');
-		}
+		_putchar('+')
+		return (1);
 	}
-	putchar('\n');
-
-	return (0);
+	else if (n == 0)
+	{
+		_putchar('0')
+		return (0);
+	}
+	else
+	{
+		_putchar('-')
+		return (-1);
+	}
 }

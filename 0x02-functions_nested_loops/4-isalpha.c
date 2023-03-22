@@ -1,27 +1,16 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Prints all all possible combinations of single-digit numbers
+ * _isalpha - check that if
+ * @c: is lower case
  *
- * Return: Always 0.
+ * Return: as it is?
 */
 
-int main(void)
+int _isalpha(int c)
 {
-	int i;
-
-	for (i = 0; i < 10; i++)
-	{
-		putchar((i % 10) + '0');
-		if (i != 9)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-	}
-	putchar('\n');
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
 
 	return (0);
 }

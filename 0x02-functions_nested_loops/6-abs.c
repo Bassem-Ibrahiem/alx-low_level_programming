@@ -1,27 +1,17 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Prints all all possible combinations of single-digit numbers
+ * _abs - computes the absolute value of an integer.
  *
- * Return: Always 0.
+ * Return: as it is?
 */
 
-int main(void)
+int _abs(int a)
 {
-	int i;
-
-	for (i = 0; i < 10; i++)
+	if (a < 0)
 	{
-		putchar((i % 10) + '0');
-		if (i != 9)
-		{
-			putchar(',');
-			putchar(' ');
-		}
+		a=a*=-1;
 	}
-	putchar('\n');
-
-	return (0);
+	
+	return(a)
 }
