@@ -4,12 +4,12 @@
  * x  = row, y = column, z = digits of current result
  * Return: times table
  */
- 
+
 void times_table(void)
 {
-	int x , y, z;
+	int x, y, z;
 
-	for (x  = 0; x  <= 9; x ++)
+	for (x  = 0; x  <= 9; x++)
 	{
 		_putchar('0');
 		_putchar(',');
