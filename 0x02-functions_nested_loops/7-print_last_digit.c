@@ -1,27 +1,15 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Prints all all possible combinations of single-digit numbers
+ * print_last_digit - prints the last digit of
+ *@a: as an integer
  *
- * Return: Always 0.
+ * Return: as it is?
 */
 
-int main(void)
+int print_last_digit(int a)
 {
-	int i;
+	x = a % 10;
 
-	for (i = 0; i < 10; i++)
-	{
-		putchar((i % 10) + '0');
-		if (i != 9)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-	}
-	putchar('\n');
-
-	return (0);
+	return (x);
 }
