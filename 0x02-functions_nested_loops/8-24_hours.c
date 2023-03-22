@@ -1,27 +1,25 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Prints all all possible combinations of single-digit numbers
- *
- * Return: Always 0.
+ * jack_bauer - prints every minute of the day of
+ * Jack Bauer, starting from 00:00 to 23:59.
+ *	x: hour and y: minutes
+ * Return: as it is?
 */
 
-int main(void)
+void jack_bauer(void)
 {
-	int i;
+	int x, y;
 
-	for (i = 0; i < 10; i++)
+	for (x = 0; x < 24; x++)
 	{
-		putchar((i % 10) + '0');
-		if (i != 9)
+		for (y = 0; y < 60; y++)
 		{
-			putchar(',');
-			putchar(' ');
+			_putchar((x / 10) + '0');
+			_putchar((x % 10) + '0');
+			_putchar(':');
+			_putchar((y / 10) + '0');
+			_putchar((y % 10) + '0');
 		}
 	}
-	putchar('\n');
-
-	return (0);
 }
