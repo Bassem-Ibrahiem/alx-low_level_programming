@@ -2,7 +2,7 @@
 
 /**
  * _islower - check that if
- * @c: is lower case
+ * c: is lower case
  *
  * Return: Always 0.
 */
