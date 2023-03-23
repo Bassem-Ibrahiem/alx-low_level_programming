@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
-* more_numbers - to print numbers between 0 and 14
- *for then times.
+* more_numbers - to print numbers between
+ * @a: as cycle between 0 and 9.
+ * @b: as series between 0 and 14
  *
  * Return: void.
 */
@@ -24,8 +25,6 @@ void more_numbers(void)
                     putchar((b / 10) + '0');
                     putchar((b % 10) + '0');
                 }
-
-
 			}
 		putchar('\n');
     }
