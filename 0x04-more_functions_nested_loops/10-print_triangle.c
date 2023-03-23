@@ -1,18 +1,25 @@
 #include "main.h"
 
 /**
- * _abs - computes the absolute value of
- *@a: as an integer
- *
- * Return: as it is?
-*/
-
-int _abs(int a)
+ * print_triangle - Prints a triangle, using the character #.
+ * @size: The size of the triangle.
+ */
+void print_triangle(int size)
 {
-	if (a < 0)
-	{
-		a = a * -1;
-	}
+	int tall, r;
 
-	return (a);
+	if (size > 0)
+	{
+		for (t = 1; t <= size; t++)
+		{
+			for (r = size - t; r > 0; r--)
+				_putchar(' ');
+
+			for (r = 0; r < t; r++)
+				_putchar('#');
+			_putchar('\n');
+		}
+	}
+	else
+		_putchar('\n');
 }
