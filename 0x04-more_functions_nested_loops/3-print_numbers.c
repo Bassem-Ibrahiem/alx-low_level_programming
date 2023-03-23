@@ -3,15 +3,17 @@
 /**
  * print_line - to print line
  * @n: number of times.
- * Return: void.
 */
 
 void print_line(int n)
 {
+	int len;
+
 	if (n > 0)
 	{
-		while (n--)
+		for (len = 0; len < n; len++)
 			_putchar('_');
 	}
+
 	_putchar('\n');
 }
