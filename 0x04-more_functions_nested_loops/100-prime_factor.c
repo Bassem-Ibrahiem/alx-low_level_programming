@@ -1,23 +1,18 @@
- #include <stdio.h>
+#include <stdio.h>
 
 /**
- * main - computes and prints the sum of all
- * Return: int.
+ * main - Entry point
+ * Return: Always 0
  */
-
 int main(void)
 {
-	int x = 0;
-	int a = 0;
+	unsigned long int i = 3, n = 612852475143;
 
-	while (x < 1024)
+	for (; i < n; i += 2)
 	{
-		if (x % 3 == 0 || x % 5 == 0)
-		{
-			a += x;
-		}
-		x += 1;
+		while (n % i == 0 && n != i)
+			n /= i;
 	}
-	printf("%d\n", a);
+	printf("%lu\n", n);
 	return (0);
 }
