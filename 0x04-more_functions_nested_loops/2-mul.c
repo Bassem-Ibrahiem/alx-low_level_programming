@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * add - a function that multiple
+ * mul - a function that multiple
  * @x: as first number input
  * @y: as second number input
  * and returns the result
