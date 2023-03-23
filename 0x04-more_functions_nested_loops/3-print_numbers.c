@@ -1,17 +1,16 @@
 #include "main.h"
 
 /**
-* print_numbers - to print numbers.
- *
+ * print_line - to print line
+ * @n: number of times.
  * Return: void.
 */
 
-void print_numbers(void)
+void print_line(int n)
 {
-	char a;
-
-	for (a = 0; a <= 9; a++)
-		_putchar(a + '0');
+	if (n > 0)
+		while (n--)
+			_putchar('_');
 
 	_putchar('\n');
 }
