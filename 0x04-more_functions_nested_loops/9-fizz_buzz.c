@@ -1,39 +1,32 @@
 #include <stdio.h>
 #include "main.h"
+
 /**
- * print_to_98 - prints all natural numbers from n to 98
- * @n: number input
- * Return: Always 0
+ * main - Prints the numbers from 1-100, and replace all
+ * multiples of three with "Fizz", and "Buzz" for multiples of five
+ * and both for multiples of (three and five).
+ *
+ * Return: Always 0.
  */
-void print_to_98(int n)
+
+int main(void)
 {
-	if (n < 98)
+	int a;
+
+	for (a = 1;a <= 100; a++)
 	{
-		while (n <= 98)
-		{
-			printf("%d", n);
-			if (n != 98)
-			{
-				printf(", ");
-			}
-			n++;
-		}
+		if (a % 3 == 0 && a % 5 == 0)
+			printf("FizzBuzz");
+		else if (a % 3 == 0)
+			printf("Fizz");
+		else if (a % 5 == 0)
+			printf("Buzz");
+		else
+			printf("%d",a);
+		if (a != 100)
+			printf(" ");
 	}
-	else if (n > 98)
-	{
-		while (n >= 98)
-		{
-			printf("%d", n);
-			if (n != 98)
-			{
-				printf(", ");
-			}
-			n--;
-		}
-	}
-	else
-	{
-		printf("98");
-	}
-	printf("\n");
+	printf('\n');
+
+	return(0);
 }
