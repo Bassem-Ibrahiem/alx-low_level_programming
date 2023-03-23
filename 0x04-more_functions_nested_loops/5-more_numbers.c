@@ -1,21 +1,33 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - print alphabet 10 times
+* print_numbers - to print numbers.
  *
- * Return: Always 0.
+ * Return: void.
 */
 
-void print_alphabet_x10(void)
+void print_numbers(void)
 {
-	int i;
-	char a;
+	int a, b;
 
-	for (i = 0; i < 10; i++)
-	{
-		for (a = 'a'; a <= 'z'; a++)
-			_putchar(a);
+	for (a = 0; a <= 9; a++)
+    {
+        for (b = 0; b <= 14; b++)
+			{
+			    if (b < 10)
+                {
+                    putchar(b + '0');
+                }
+                else
+                {
+                    putchar((b / 10) + '0');
+                    putchar((b % 10) + '0');
+                }
 
-		_putchar('\n');
-	}
+
+			}
+		putchar('\n');
+    }
+
+	return 0;
 }

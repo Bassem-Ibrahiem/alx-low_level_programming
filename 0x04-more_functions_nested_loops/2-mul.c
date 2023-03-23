@@ -1,11 +1,12 @@
 #include "main.h"
 /**
- * add - a function that adds y integers and returns the result
- * @x: first number input
- * @y: second number input
+ * add - a function that multiple
+ * @x: as first number input
+ * @y: as second number input
+ * and returns the result
  * Return: x + y
  */
-int add(int x, int y)
+int mul(int x, int y)
 {
-	return (x + y);
+	return (x * y);
 }

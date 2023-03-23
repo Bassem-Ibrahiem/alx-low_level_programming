@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * _islower - check that if
- * @c: is lower case
+ * _isupper - check that if
+ * @c: is upper case
  *
  * Return: as it is?
 */
 
-int _islower(int c)
+int _isupper(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (c >= 65 && c <= 90)
 		return (1);
 
 	return (0);

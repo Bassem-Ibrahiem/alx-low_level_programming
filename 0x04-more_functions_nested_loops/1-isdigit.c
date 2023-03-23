@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * _isalpha - check that if
- * @c: is lower case
+ * _isdigit - check that if
+ * @c: is digit.
  *
  * Return: as it is?
 */
 
-int _isalpha(int c)
+int _isdigit(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	if (c >= 48 && c <= 57)
 		return (1);
 
 	return (0);
