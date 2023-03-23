@@ -1,26 +1,16 @@
 #include "main.h"
 
 /**
- * jack_bauer - prints every minute of the day of
- * Jack Bauer, starting from 00:00 to 23:59.
- *	x: hour and y: minutes
- * Return: as it is?
-*/
+ * print_line - Draws a straight line using the character _.
+ * @n: The number of _ characters to be printed.
+ */
 
-void jack_bauer(void)
+void print_line(void)
 {
-	int x, y;
-
-	for (x = 0; x < 24; x++)
+	if (n > 0)
 	{
-		for (y = 0; y < 60; y++)
-		{
-			_putchar((x / 10) + '0');
-			_putchar((x % 10) + '0');
-			_putchar(':');
-			_putchar((y / 10) + '0');
-			_putchar((y % 10) + '0');
-			_putchar('\n');
-		}
+		while (n--)
+			_putchar('_');
 	}
+	_putchar('\n');
 }

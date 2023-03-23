@@ -1,19 +1,15 @@
 #include "main.h"
 
 /**
- * print_line - to print line
- * @n: number of times.
-*/
+ * print_numbers - print numbers between 0 and 9.
+ */
 
-void print_line(int n)
+void print_numbers(void)
 {
-	int len;
+	char a;
 
-	if (n > 0)
-	{
-		for (len = 0; len < n; len++)
-			_putchar('_');
-	}
+	for (a = 0; a <= 9; a++)
+		_putchar(a + '0');
 
 	_putchar('\n');
 }
