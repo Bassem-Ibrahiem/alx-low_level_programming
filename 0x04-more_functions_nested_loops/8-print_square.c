@@ -5,6 +5,7 @@
  * @size: The value of the times table to be printed.
  * @a: Number of columns.
  * @b: Number of rows.
+ * Return: Alawys 0.
  */
 void print_square(int size)
 {
