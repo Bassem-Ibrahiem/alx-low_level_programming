@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
-* print_numbers - to print numbers.
+* more_numbers - to print numbers between 0 and 14
+ *for then times.
  *
  * Return: void.
 */
 
-void print_numbers(void)
+void more_numbers(void)
 {
 	int a, b;
 
@@ -28,6 +29,4 @@ void print_numbers(void)
 			}
 		putchar('\n');
     }
-
-	return 0;
 }
