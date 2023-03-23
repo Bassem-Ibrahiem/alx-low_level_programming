@@ -1,21 +1,19 @@
 #include "main.h"
 
 /**
- * print_square - Prints square.
- * @size: The value of the times table to be printed.
- * @a: Number of columns.
- * @b: Number of rows.
- * Return: Alawys 0.
+ * print_square - prints a square,
+ * @size: as size of square.
+ * Return: Always 0
  */
 void print_square(int size)
 {
 	int a, b;
 
-    if (size > 0)
+	if (size > 0)
 	{
-		for (b = 0; b < size; b++)
+		for (a = 0; a < size; a++)
 		{
-			for (a = 0; a < size; a++)
+			for (b = 0; b < size; b++)
 				_putchar('#');
 			_putchar('\n');
 		}
