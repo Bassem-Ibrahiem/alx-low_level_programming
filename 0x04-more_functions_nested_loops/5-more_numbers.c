@@ -4,7 +4,7 @@
  * File: 5-more_numbers.c
  * more_numbers - Prints the numbers 0-14 ten times.
  */
-void more_bbers(void)
+void more_numbers(void)
 {
 	int a, b;
 
