@@ -1,44 +1,24 @@
 #include "main.h"
 
 /**
- * print_times_table - Prints the times table of the input,
- *                     starting with 0.
- * @n: The value of the times table to be printed.
+ * print_square - Prints square.
+ * @size: The value of the times table to be printed.
+ * @a: Number of columns.
+ * @b: Number of rows.
  */
-void print_times_table(int n)
+void print_square(int size)
 {
-	int x, y, z;
+	int a, b;
 
-	if (n >= 0 && n <= 15)
+    if (size > 0)
 	{
-		for (x = 0; x <= n; x++)
+		for (b = 0; b <= size; b++)
 		{
-			_putchar('0');
+			for (a = 0; a <= size; a++)
+				_putchar('#');
 
-			for (y = 1; y <= n; y++)
-			{
-				_putchar(',');
-				_putchar(' ');
-
-				z = x * y;
-
-				if (z <= 99)
-					_putchar(' ');
-				if (z <= 9)
-					_putchar(' ');
-
-				if (z >= 100)
-				{
-					_putchar((z / 100) + '0');
-					_putchar(((z / 10)) % 10 + '0');
-				}
-				else if (z <= 99 && z >= 10)
-				{
-					_putchar((z / 10) + '0');
-				}
-				_putchar((z % 10) + '0');
-			}
 			_putchar('\n');
 		}
 	}
+	_putchar('\n');
 }
