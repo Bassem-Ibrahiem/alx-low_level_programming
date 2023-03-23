@@ -1,38 +1,24 @@
 #include "main.h"
+
 /**
- * times_table -  prints the 9 times table, starting with 0
- * x  = row, y = column, z = digits of current result
- * Return: times table
+ * print_diagonal - Draws a straight line using the character \.
+ * @n: The number of \ characters to be printed.
  */
 
-void times_table(void)
+void print_diagonal(int n)
 {
-	int x, y, z;
+	int a, b;
 
-	for (x  = 0; x  <= 9; x++)
+	if (n > 0)
 	{
-		_putchar('0');
-		_putchar(',');
-		_putchar(' ');
-		for (y = 1; y <= 9; y++)
+		for (a = 0; a < n; a++)
 		{
-			z = (x  * y);
-			if ((z / 10) > 0)
-			{
-				_putchar((z / 10) + '0');
-			}
-			else
-			{
+			for (b = 0; b < n; b++)
 				_putchar(' ');
-			}
-			_putchar((z % 10) + '0');
-
-			if (y < 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
+			_putchar('\\');
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
+	else
+		_putchar('\n');
 }
