@@ -1,24 +1,21 @@
 #include "main.h"
 
 /**
- * main - function that prints an integer.
+ * print_number - Prints an integer.
  * @n: The integer to be printed.
- * @u: as ass. factor.
- * Return: int.
  */
-
 void print_number(int n)
 {
-	unsigned int u = n;
+	unsigned int num = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		u = -u;
+		num = -num;
 	}
 
-	if ((u / 10) > 0)
-		print_number(u / 10);
+	if ((num / 10) > 0)
+		print_number(num / 10);
 
-	_putchar((u % 10) + '0');
+	_putchar((num % 10) + '0');
 }
