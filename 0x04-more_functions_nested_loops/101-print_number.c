@@ -3,6 +3,7 @@
 /**
  * main - function that prints an integer.
  * @n: The integer to be printed.
+ * @u: as ass. factor.
  * Return: int.
  */
 
