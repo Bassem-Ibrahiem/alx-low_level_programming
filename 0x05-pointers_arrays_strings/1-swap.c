@@ -5,7 +5,6 @@
  * swap_int - function that swaps the values of
  * @a: as first integer
  * @b: as second integer
- * @x: as assistant pointer between them
  *
  * Return: as it is?
 */
