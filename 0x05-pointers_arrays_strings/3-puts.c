@@ -1,16 +1,18 @@
 #include "main.h"
 
 /**
- * _isupper - check that if
- * @c: is upper case
+ * _puts - function that prints
+ * @str: as  a string, followed by a new line
  *
  * Return: as it is?
 */
 
-int _isupper(int c)
+void _puts(char *str)
 {
-	if (c >= 65 && c <= 90)
-		return (1);
-
-	return (0);
+	while (*str)
+	{
+		_putchar(*str);
+		str++;
+	}
+	_putchar('\n');
 }
