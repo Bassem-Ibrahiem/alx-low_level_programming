@@ -1,16 +1,20 @@
 #include "main.h"
 
 /**
- * _isupper - check that if
- * @c: is upper case
+ * puts2 - function that prints
+ * every other character of
+ * @strr: as a string, starting with the first character
+ * , followed by a new line.
  *
  * Return: as it is?
 */
 
-int _isupper(int c)
+void puts2(char *str)
 {
-	if (c >= 65 && c <= 90)
-		return (1);
+	int i;
 
-	return (0);
+	for (i = 0; str[i] != '\0';i+=2)
+		_putchar(str[i]);
+
+	_putchar('\n');
 }
