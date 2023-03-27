@@ -1,16 +1,19 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * _isupper - check that if
- * @c: is upper case
- *
+ * print_array - function that prints
+ * @n: as elements of
+ * @a: as an array of integers, followed by a new line.
  * Return: as it is?
 */
 
-int _isupper(int c)
+void print_array(int *a, int n)
 {
-	if (c >= 65 && c <= 90)
-		return (1);
-
-	return (0);
+	int i;
+	for (i = 0; i < n; i++)
+		if (i == n - 1)
+			printf("%d\n", a[n]);
+		else
+			printf("%d, ", a[n]);
 }
