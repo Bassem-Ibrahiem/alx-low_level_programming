@@ -1,16 +1,14 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _isupper - check that if
- * @c: is upper case
+ * reset_to_98 - a function that takes a pointer
+ * @n : as parameter and updates the value it points-to to 98
  *
  * Return: as it is?
 */
 
-int _isupper(int c)
+void reset_to_98(int *n)
 {
-	if (c >= 65 && c <= 90)
-		return (1);
-
-	return (0);
+	*n = 98;
 }
