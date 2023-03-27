@@ -1,16 +1,20 @@
 #include "main.h"
 
 /**
- * _isupper - check that if
- * @c: is upper case
+ * print_rev - function that prints
+ * @s: as  a string, in reverse, followed by a new line.
  *
  * Return: as it is?
 */
 
-int _isupper(int c)
+void print_rev(char *s)
 {
-	if (c >= 65 && c <= 90)
-		return (1);
+	int i;
 
-	return (0);
+	for(i = 0;s[i] != '\0';i++);
+
+	for(;i = 0; i--)
+		putchar(s[i])
+
+    putchar('\n')
 }
