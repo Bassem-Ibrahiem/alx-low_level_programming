@@ -1,16 +1,20 @@
 #include "main.h"
 
 /**
- * _isupper - check that if
- * @c: is upper case
+ * rev_string - function that reverses
+ * @s: as a string.
  *
  * Return: as it is?
 */
 
-int _isupper(int c)
+void rev_string(char *s)
 {
-	if (c >= 65 && c <= 90)
-		return (1);
+	int i;
 
-	return (0);
+	for (i = 0; s[i] != '\0'; i++)
+		;
+	for (i = i - 1; i >= 0; i--)
+		_putchar(s[i]);
+
+	_putchar('\n');
 }
