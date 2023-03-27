@@ -1,16 +1,17 @@
 #include "main.h"
 
 /**
- * _isupper - check that if
- * @c: is upper case
+ * _strlen - function that returns the length of a string
+ * @s: as string
  *
  * Return: as it is?
 */
 
-int _isupper(int c)
+int _strlen(char *s)
 {
-	if (c >= 65 && c <= 90)
-		return (1);
+	int len;
+	
+	len = strlen(s);
 
-	return (0);
+	return (len);
 }
