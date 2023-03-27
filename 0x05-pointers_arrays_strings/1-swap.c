@@ -1,16 +1,21 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _isupper - check that if
- * @c: is upper case
+ * swap_int - function that swaps the values of
+ * @a: as first integer
+ * @b: as second integer
+ * @x: as assistant pointer between them
  *
  * Return: as it is?
 */
 
-int _isupper(int c)
+void swap_int(int *a, int *b)
 {
-	if (c >= 65 && c <= 90)
-		return (1);
+	int x;
+	x = *a;
+	*a = *b;
+	*b = x;
 
 	return (0);
 }
