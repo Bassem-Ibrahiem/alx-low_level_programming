@@ -1,16 +1,24 @@
 #include "main.h"
 
 /**
- * _isupper - check that if
- * @c: is upper case
+ * puts_half - function that prints half of
+ * @str: as a string, followed by a new line.
  *
  * Return: as it is?
 */
 
-int _isupper(int c)
+void puts_half(char *str)
 {
-	if (c >= 65 && c <= 90)
-		return (1);
+	int l, i;
 
-	return (0);
+	for (l = 0; str[l] != '\0'; l++)
+		;
+	if (l % 2 == 0)
+		i = l / 2;
+	else
+		i = (l - 1) / 2;
+	for (; i < l; i ++)
+		_putchar(str[i]);
+
+	_putchar('\n');
 }
