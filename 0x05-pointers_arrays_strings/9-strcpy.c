@@ -1,16 +1,23 @@
 #include "main.h"
 
 /**
- * _isupper - check that if
- * @c: is upper case
+ * _strcpy - function that copies
+ * @src: as the string pointed to by
+ * , including the terminating null byte (\0)
+ * @dest: to the buffer pointed to by dest.
  *
  * Return: as it is?
 */
 
-int _isupper(int c)
+char *_strcpy(char *dest, char *src)
 {
-	if (c >= 65 && c <= 90)
-		return (1);
+	int l, i;
 
-	return (0);
+	l = 0;
+
+	while (src[l] != '\0')
+		l++;
+	for (i = 0; i <= l; i++)
+		dest[i] = src[i];
+	return (dest);
 }
