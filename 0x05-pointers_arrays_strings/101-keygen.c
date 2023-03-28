@@ -22,9 +22,9 @@ int main(void)
 		pass[i] = rand() % 82;
 		s += (pass[i] + '0');
 		putchar(pass[i] + '0');
-		if ((3831 - s) - '0' < 82)
+		if ((3832 - s) - '0' < 82)
 		{
-			n = 3831 - s - '0';
+			n = 3832 - s - '0';
 			s += n;
 			putchar(n + '0');
 			break;
