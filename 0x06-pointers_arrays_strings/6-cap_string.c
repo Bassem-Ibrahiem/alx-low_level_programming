@@ -1,20 +1,30 @@
 #include "main.h"
 
 /**
- * cap_string - function that capitalizes
- * all words of a string.
+ * cap_string - a function that capitalizes
+ * @s: as a string, for the first letters words of .
  *
  * Return: as it is?
 */
 
-char *cap_string(char *)
+char *cap_string(char *s)
 {
-	int l, i;
+	int i, j;
+	char seps[13] = {' ', '\t', '\n', ',', ';', '.', '!',
+					'?', '"', '(', ')', '{', '}'}
 
-	for (l = 0; str[l] != '\0'; l++)
-		;
-	for (i = 0; i < l; i += 2)
-		_putchar(str[i]);
-
-	_putchar('\n');
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
+		for (j = 0; j < 13; j++)
+		{
+			if (s[i] == seps[j])
+			{
+				if (s[i+1] >= 'a' && s[i+1] <= 'z')
+					s[i] -= 32;
+			}
+		}
+	}
+	return (s);
 }
