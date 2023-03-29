@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rev_string - function that changes
+ * string_toupper - function that changes
  * all lowercase letters of
  * @s: as a string to uppercase.
  *
