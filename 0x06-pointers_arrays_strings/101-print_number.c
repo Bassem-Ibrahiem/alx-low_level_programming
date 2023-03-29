@@ -1,35 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 
 /**
- * print_number - a function that prints
- * @n: as an integer.
- *
- * Return: Always 0 (Success)
+ * print_number - Prints an integer.
+ * @n: The integer to be printed.
  */
-void print_number(int n);
+void print_number(int n)
 {
-	int pass[100];
-	int i, s, n;
+	unsigned int u = n;
 
-	s = 0;	
-
-	srand(time(NULL));
-
-	for (i = 0; i < 100; i++)
+	if (n < 0)
 	{
-		pass[i] = rand() % 78;
-		s += (pass[i] + '0');
-		putchar(pass[i] + '0');
-		if ((2772 - s) - '0' < 78)
-		{
-			n = 2772 - s - '0';
-			s += n;
-			putchar(n + '0');
-			break;
-		}
+		_putchar('-');
+		u = -u;
 	}
 
-	return (0);
+	if ((u / 10) > 0)
+		print_number(u / 10);
+
+	_putchar((u % 10) + '0');
 }
