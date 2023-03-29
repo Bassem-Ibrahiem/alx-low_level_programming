@@ -10,10 +10,10 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	while (*str)
+	while (*s1 == *s2)
 	{
-		_putchar(*str);
-		str++;
+		s1++;
+		s2++;
 	}
-	_putchar('\n');
+	return (*s1 - *s2);
 }
