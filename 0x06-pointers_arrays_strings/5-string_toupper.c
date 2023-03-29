@@ -2,23 +2,20 @@
 
 /**
  * rev_string - function that changes
- * all lowercase letters of a string to uppercase.
+ * all lowercase letters of
+ * @s: as a string to uppercase.
  *
  * Return: as it is?
 */
 
-char *string_toupper(char *)
+char *string_toupper(char *s)
 {
-	char p = s[0];
-	int l, i;
+	int i;
 
-	for (l = 0; s[l] != '\0'; l++)
-		;
-	for (i = 0; i < l; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		l--;
-		p = s[i];
-		s[i] = s[l];
-		s[l] = p;
+		if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
 	}
+	return (s);
 }
