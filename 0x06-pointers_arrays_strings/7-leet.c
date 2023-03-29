@@ -1,23 +1,26 @@
 #include "main.h"
 
 /**
- * leet - function that encodes a string into 1337.
+ * leet - function that encodes
+ * @s: as a string into 1337.
  *
  * Return: as it is?
 */
 
-char *leet(char *)
+char *leet(char *s)
 {
-	int l, i;
+	int x, y;
 
-	for (l = 0; str[l] != '\0'; l++)
-		;
-	if (l % 2 == 0)
-		i = l / 2;
-	else
-		i = (l + 1) / 2;
-	for (; i < l; i++)
-		_putchar(str[i]);
+	char *c = "AaEeOoLlTt";
+	char *n = "4433001177";
 
-	_putchar('\n');
+	for (x = 0; s[x] != '\0'; x++)
+	{
+		for (y = 0; y < 10; y++)
+		{
+			if (s[x] == c[y])
+				s[x] = n[y];
+		}
+	}
+	return (s);
 }
