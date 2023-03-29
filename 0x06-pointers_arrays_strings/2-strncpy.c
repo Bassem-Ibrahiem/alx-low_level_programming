@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
-* _strncat - a function that concatenates two strings.
+* _strncpy - a function that copies a string.
  * @src: as source string
  * @dest: as destination string
  * @n: as an integer for most bytes in source
