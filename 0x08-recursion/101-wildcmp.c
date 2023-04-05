@@ -3,7 +3,6 @@
  * wildcmp - compares two strings
  * @s1: as the normal string
  * @s2: as the special string containing "*"
-  
  * and returns 1 if the strings can be considered identical,
  * otherwise return 0.
  *
