@@ -1,38 +1,37 @@
-#include "list.h"
+#include "lists.h"
 
 /**
- * _strlen - function that returns the length of a string
- * @s: as string
+ * _strlen - returns the length of a string
+ * @s: the string whose length to check
  *
- * Return: as it is?
-*/
-
+ * Return: integer length of string
+ */
 int _strlen(char *s)
 {
-	int l;
+	int i = 0;
 
 	if (!s)
-		return (0)
-	for (l = 0; s[l] != '\0'; l++)
-		;
-	return (l);
+		return (0);
+	while (*s++)
+		i++;
+	return (i);
 }
 
 /**
- * print_list - Prints linked list
+ * print_list - prints a linked lists
  * @h: pointer to first node
  *
- * Return: Size of elements
+ * Return: size of list
  */
-
 size_t print_list(const list_t *h)
 {
-	size_t l = 0
+	size_t i = 0;
+
 	while (h)
 	{
-		printf("[%d] %s\n", _strlen(h->str.h), h->str ? h->str : "(nil)");
+		printf("[%d] %s\n", _strlen(h->str), h->str ? h->str : "(nil)");
 		h = h->next;
-		l++;
+		i++;
 	}
-	return (l);
+	return (i);
 }
