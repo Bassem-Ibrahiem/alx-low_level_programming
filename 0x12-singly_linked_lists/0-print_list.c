@@ -27,10 +27,12 @@ int _strlen(char *s)
 
 size_t print_list(const list_t *h)
 {
-	for (size_t a = 0; h; a++)
+	size_t a = 0
+	while (h)
 	{
-		printf("[%d] %s\n", _strlen(h->str.h), h->str.h ? h->str.h : "(nil)");
+		printf("[%d] %s\n", _strlen(h->str.h), h->str ? h->str : "(nil)");
 		h = h->next;
+		a++;
 	}
 	return (a);
 }
