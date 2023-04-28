@@ -1,12 +1,21 @@
-section		.text
-	extern	printf
-	global	main
+	extern printf
 
+	section .data
+message:	db "Hello, Holberton", 0
+format:		db "%s", 10, 0
+
+	section .text
+
+	global main
 main:
-	mov		edi, msg
-	mov		eax, 0
+	push	rbp
+
+	mov 	rax, 0
+	mov	rdi,format
+	mov	rsi,message
 	call	printf
 
+	pop	rbp
 
-section		.data
-	msg db 'Hello, Holberton', 0xa, 0
+	mov 	rax, 0
+	ret
