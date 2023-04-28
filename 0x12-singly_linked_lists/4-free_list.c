@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_list - frees all nodes of a list
+ * free_list - Frees all nodes of a list
  * @head: pointer to head node
  *
  * Return: void
