@@ -1,24 +1,30 @@
 #include "lists.h"
 
 /**
- * *add_node - Return the number of elements in a linked list
- * @head: data type poointer of struct node
- * @str: data type pointer of struct
-* Return: elements of the str i
+ * add_node - Adds a node in the start of the list
+ * @head: address of pointer to head node
+ * @str: string field of node
+ *
+ * Return: size of the list
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *n_node;
+	list_t *new_head = malloc(sizeof(list_t));
 
-	n_node = malloc(sizeof(list_t));
-
-	if (n_node == NULL)
+	if (!head || !new_head)
 		return (NULL);
+	if (str)
+	{
+		new_head->str = strdup(str);
+		if (!new_head->str)
+		{
+			free(new_head);
+			return (NULL);
+		}
+		new_head->len = _strlen(new_head->str);
+	}
 
-	n_node->str = strdup(str);
-	n_node->len = _strlen(str);
-	n_node->next = *head;
-	*head = n_node;
-
-	return (n_node);
+	new_head->next = *head;
+	*head = new_head;
+	return (new_head);
 }
