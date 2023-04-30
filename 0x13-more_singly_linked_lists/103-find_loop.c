@@ -7,25 +7,25 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *first_loop = head;
-	listint_t *second_loop = head;
+	listint_t *first = head;
+	listint_t *second = head;
 
 	if (head == NULL)
 		return  (NULL);
 	if (head == head->next)
 		return (head);
-	while (first_loop)
+	while (first)
 	{
-		first_loop = first_loop->next;
-		second_loop = head;
-		while (first_loop && second_loop != first_loop)
+		first = first->next;
+		second = head;
+		while (first && second != first)
 		{
-			if (second_loop == first_loop->next)
+			if (second == first->next)
 			{
-				return (second_loop);
+				return (second);
 			}
-			second_loop = second_loop->next;
+			second = second->next;
 		}
 	}
-	return (first_loop);
+	return (first);
 }
