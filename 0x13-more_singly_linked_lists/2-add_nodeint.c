@@ -1,22 +1,27 @@
 #include "lists.h"
 
 /**
- * add_nodeint - Adds a node at the begining of a listint_t.
- * @n: data type pointer of struct
- * @head: data type pointer of the head/next node
- * Return: elements of the str new_node
+ * add_nodeint - Adds a new node at the beginning
+ *               of a listint_t list.
+ * @head: A pointer to the address of the
+ *        head of the listint_t list.
+ * @n: The integer for the new node to contain.
+ *
+ * Return: If the function fails - NULL.
+ *         Otherwise - the address of the new element.
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	listint_t *new_node;
+	listint_t *new;
 
-	new_node = malloc(sizeof(listint_t));
-	if (new_node == NULL)
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
 		return (NULL);
 
-	new_node->n = n;
-	new_node->next = *head;
-	*head = new_node;
+	new->n = n;
+	new->next = *head;
 
-	return (new_node);
+	*head = new;
+
+	return (new);
 }

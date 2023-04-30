@@ -1,47 +1,45 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - insert a node in a given position.
- * @head: data type pointer the head/next node
- * @idx: data type unsigned int index
- * @n: data type int
- * Return: new_node
+ * insert_nodeint_at_index - Inserts a new node to a listint_t
+ *                           list at a given position.
+ * @head: A pointer to the address of the
+ *        head of the listint_t list.
+ * @idx: The index of the listint_t list where the new
+ *       node should be added - indices start at 0.
+ * @n: The integer for the new node to contain.
+ *
+ * Return: If the function fails - NULL.
+ *         Otherwise - the address of the new node.
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *tmp_node, *new_node;
-	unsigned int counter = 0;
+	listint_t *new, *copy = *head;
+	unsigned int node;
 
-	if (head == NULL && *head == NULL)
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
 		return (NULL);
 
-	tmp_node = *head;
+	new->n = n;
+
 	if (idx == 0)
 	{
-		new_node = malloc(sizeof(listint_t));
-
-		if (new_node == 0)
-			return (NULL);
-		new_node->n = n;
-		new_node->next = tmp_node;
-		*head = new_node;
-		return (new_node);
+		new->next = copy;
+		*head = new;
+		return (new);
 	}
-	while (tmp_node)
+
+	for (node = 0; node < (idx - 1); node++)
 	{
-		if (counter + 1 == idx)
-		{
-			new_node = malloc(sizeof(listint_t));
+		if (copy == NULL || copy->next == NULL)
+			return (NULL);
 
-			if (new_node == 0)
-				return (NULL);
-			new_node->n = n;
-			new_node->next = tmp_node->next;
-			tmp_node->next = new_node;
-			return (new_node);
-		}
-		tmp_node = tmp_node->next;
-		counter++;
+		copy = copy->next;
 	}
-	return (NULL);
+
+	new->next = copy->next;
+	copy->next = new;
+
+	return (new);
 }
